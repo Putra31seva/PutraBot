@@ -79,6 +79,7 @@ const {
     namaninja,
     bitly,
     nekonime,
+	Jawaban,
     cektanggal,
     chord,
     zodiak,
@@ -355,6 +356,18 @@ client.on('message-new', async (m) => {
                .catch(err => {
                    console.log(err)
                })
+		   }
+           break
+       case 'Jawaban':
+           animPict()
+               .then(buffer => {
+                   client.sendMessage(id, '[❗] Hai kamu🖤', MessageType.text)
+                   client.sendMessage(id, buffer, MessageType.image)
+               })
+               .catch(err => {
+                   console.log(err)
+               })
+	
            break
        case 'lirik':
            lirik(value)
