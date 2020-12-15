@@ -367,7 +367,7 @@ client.on('message-new', async (m) => {
                .catch(err => {
                    console.log(err)
                })
-	
+	}
            break
        case 'lirik':
            lirik(value)
